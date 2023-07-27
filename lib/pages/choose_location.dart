@@ -9,12 +9,11 @@ class ChooseLocation extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<ChooseLocation> {
-  int counter = 0;
   void getData() {
     //simulate network request for a username
     Future.delayed(Duration(seconds: 3), () {
       setState(() {
-        counter = 42; // Update the 'counter' variable to 42 after the delay
+        // Update the 'counter' variable to 42 after the delay
       });
     });
   }
@@ -39,7 +38,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
         onPressed: (() {
           setState(() {});
         }),
-        child: Text('Counter is$counter'),
+        child: Text('Counter is'),
       ),
     );
   }
