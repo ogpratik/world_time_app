@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
+// import 'dart:async';
 
 class ChooseLocation extends StatefulWidget {
   const ChooseLocation({super.key});
@@ -9,12 +9,10 @@ class ChooseLocation extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<ChooseLocation> {
-  void getData() {
-    //simulate network request for a username
-    Future.delayed(Duration(seconds: 3), () {
-      setState(() {
-        // Update the 'counter' variable to 42 after the delay
-      });
+  void getData() async {
+    // simulate network request for a username
+    String username = await Future.delayed(Duration(seconds: 3), () {
+      return 'yoshi';
     });
   }
 
