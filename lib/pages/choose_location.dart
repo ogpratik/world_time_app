@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'dart:async';
+import 'dart:async';
 
 class ChooseLocation extends StatefulWidget {
   const ChooseLocation({super.key});
@@ -9,11 +9,24 @@ class ChooseLocation extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<ChooseLocation> {
-  void getData() async {
+  // void getData() async {
+  //   // simulate network request for a username
+  //   String username = await Future.delayed(Duration(seconds: 3), () {
+  //     return 'yoshi';
+  //   });
+  // }
+  void getData() {
     // simulate network request for a username
-    String username = await Future.delayed(Duration(seconds: 3), () {
-      return 'yoshi';
+    Timer(const Duration(seconds: 3), () {
+      print('yoshi');
     });
+
+    //simulate network request to get bio of the username
+    Timer(const Duration(seconds: 2), () {
+      print('vegan  boi');
+    });
+
+    print('statement');
   }
 
   @override
@@ -36,7 +49,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
         onPressed: (() {
           setState(() {});
         }),
-        child: Text('Counter is'),
+        child: const Text('Counter is'),
       ),
     );
   }
